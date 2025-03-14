@@ -272,4 +272,45 @@ nav ul li a {
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
         }
         
+        footer {
+           
+            padding: 30px;
+            border-top: 1px solid #000; /* Línea superior */
+            font-family: "Arial", sans-serif;
+            font-size: 16px;
+            color: #000;
+            position: relative;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        /* Contenedor principal */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        /* Links de contacto */
+        .contact-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Información adicional */
+        .contact-info {
+            text-align: right;
+        }
         
