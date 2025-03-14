@@ -9,28 +9,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
+    <!-- Barra de progreso -->
+    <div id="progress-bar"></div>
+
     <header>
         <h1 class="logo">Mi Nombre</h1>
-        <nav>
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#trabajos">Trabajos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+
+        <!-- Menú responsive solo en móviles -->
+        <div id="menu-toggle">&#9776;</div>
     </header>
-    
-    <section id="hero" class="section">
-        <h2 class="fade-in">Diseñador de Contenido Multimedia & Desarrollo Web</h2>
-        <p class="fade-in">Explora mi trabajo en diseño digital, desarrollo web y rebranding de plataformas.</p>
+
+    <!-- Menú lateral para móviles -->
+    <aside id="sidebar">
+        <div id="close-menu">&times;</div>
+        <ul>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#trabajos">Trabajos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </aside>
+
+    <section id="hero" class="section fade-in">
+        <h2>Diseñador de Contenido Multimedia & Desarrollo Web</h2>
+        <p>Explora mi trabajo en diseño digital, desarrollo web y rebranding de plataformas.</p>
     </section>
-    
-    <section id="sobre-mi" class="section">
+
+    <section id="sobre-mi" class="section fade-in">
         <h2>Sobre Mí</h2>
-        <p>Soy estudiante de Informática Empresarial en la Universidad de Costa Rica (UCR) y diseñador web Front-End graduado de UCENFOTEC. Me especializo en la creación de contenido multimedia y en la modernización de sitios web obsoletos.</p>
+        <p>Soy estudiante de Informática Empresarial en la UCR y diseñador web Front-End graduado de UCENFOTEC.</p>
     </section>
-    
-    <section id="trabajos" class="section">
+
+    <section id="trabajos" class="section fade-in">
         <h2>Mis Trabajos</h2>
         <div class="grid">
             <div class="proyecto">Contenido Multimedia</div>
@@ -38,16 +55,12 @@
             <div class="proyecto">Rework de Plataformas</div>
         </div>
     </section>
-    
-    <section id="contacto" class="section">
+
+    <section id="contacto" class="section fade-in">
         <h2>Contacto</h2>
         <p>Envíame un mensaje a <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
     </section>
-    
+
     <script src="java.js"></script>
-    
-   
-    
-    
 </body>
 </html>
