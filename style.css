@@ -26,7 +26,7 @@ body {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 80%), 
                 url('img/1.jpg') no-repeat center top;
     
-   
+       
     background-position: center top; /* Mantiene la imagen centrada */
     background-attachment: scroll; /* Se mueve con el scroll */
     min-height: 200vh; /* Asegura suficiente espacio para el scroll */
