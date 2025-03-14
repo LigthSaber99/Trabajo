@@ -56,6 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
         progressBar.style.width = `${progress}%`;
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeMenu = document.getElementById("close-menu");
+    const body = document.body;
+
+    menuToggle.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        body.classList.add("no-scroll");
+    });
+
+    closeMenu.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        body.classList.remove("no-scroll");
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll("#sidebar a").forEach(link => {
+        link.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+            body.classList.remove("no-scroll");
+        });
+    });
+});
 
 // 🔹 CSS Integrado en JavaScript
 const style = document.createElement("style");

@@ -78,29 +78,30 @@ nav ul li a {
     padding-top: 60px;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
+}/* Menú lateral mejorado para móviles */
+#sidebar {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 80%; /* Ocupa el 80% de la pantalla en móvil */
+    max-width: 300px; /* Máximo tamaño */
+    height: 100vh;
+    background: #333;
+    color: white;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
 }
-/* Mostrar menú cuando está activo */
+
 #sidebar.active {
     right: 0;
 }
-/* Estilos de enlaces del menú */
-#sidebar ul {
-    list-style: none;
-    padding: 0;
+
+/* Evitar scroll en el fondo cuando el menú está abierto */
+body.no-scroll {
+    overflow: hidden;
 }
-#sidebar ul li {
-    margin: 20px 0;
-    text-align: center;
-}
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-}
-#sidebar ul li a:hover {
-    background: #575757;
-}
+
 /* Botón para cerrar menú */
 #close-menu {
     position: absolute;
