@@ -22,13 +22,17 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 100%), 
-    url('img/3.jpg') no-repeat center top;
-    background-size: 100% auto; /* Ajusta el ancho al 100% y la altura automática */
-    height: 200vh; /* Para tener suficiente espacio para hacer scroll */
-    background-position: top;
-    background-attachment: scroll; /* Evita que la imagen se quede fija */
+                url('img/3.jpg') no-repeat center top;
+    
+    background-size: 500% auto; /* Aumenta el ancho sin afectar la altura */
+    background-position: center top; /* Mantiene la imagen centrada */
+    background-attachment: scroll; /* Se mueve con el scroll */
+    min-height: 200vh; /* Asegura suficiente espacio para el scroll */
 }
+
+
 
 /* Header */
 header {
