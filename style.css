@@ -26,13 +26,13 @@ body {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 100%), 
                 url('img/1.jpg') no-repeat center top;
     
-    background-size: 500% auto; /* Aumenta el ancho sin afectar la altura */
+   
     background-position: center top; /* Mantiene la imagen centrada */
     background-attachment: scroll; /* Se mueve con el scroll */
     min-height: 200vh; /* Asegura suficiente espacio para el scroll */
 
 
-    
+
 }
 
 
