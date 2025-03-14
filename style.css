@@ -143,35 +143,8 @@ body.no-scroll {
         flex-direction: column;
     }
 }
-/* MENÚ RESPONSIVE */
-#sidebar {
-    position: fixed;
-    right: -100vw; /* Oculto completamente */
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    color: white;
-    padding-top: 60px;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-}
-#sidebar.active {
-    right: 0;
-}
-#sidebar ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-#sidebar ul li {
-    padding: 15px 20px;
-}
-#sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
+
+
 #menu-toggle {
     font-size: 28px;
     cursor: pointer;
