@@ -157,3 +157,63 @@ nav ul li a {
         flex-direction: column;
     }
 }
+/* MENÚ RESPONSIVE */
+#sidebar {
+    position: fixed;
+    right: -100vw; /* Oculto completamente */
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    color: white;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#sidebar ul li {
+    padding: 15px 20px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    z-index: 1100;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Ajuste para evitar que el header cubra contenido */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+}
