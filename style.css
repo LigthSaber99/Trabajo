@@ -1,15 +1,21 @@
 
+
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow-x: hidden;
 }
 header {
     padding: 20px;
-    background: #1f1f1f;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 .logo {
     font-size: 2em;
@@ -24,21 +30,30 @@ nav ul li {
     margin: 0 15px;
 }
 nav a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 section {
-    padding: 50px 20px;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 .proyecto {
-    background: #282828;
-    margin: 10px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 400px;
+    background: #222;
+    padding: 40px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
-a:hover {
-    color: #ffcc00;
+.proyecto:hover {
+    transform: scale(1.1);
 }
