@@ -14,6 +14,7 @@
     height: 5px;
     background: #ff5733;
     z-index: 1000;
+    transition: width 0.2s ease;
 }
 
 /* Estilos generales */
@@ -42,6 +43,7 @@ header {
     font-size: 24px;
 }
 
+/* Menú principal (oculto en móvil) */
 nav ul {
     list-style: none;
     display: flex;
@@ -56,25 +58,39 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Menú responsive */
+/* Botón de menú (hamburguesa) */
 #menu-toggle {
     font-size: 28px;
     cursor: pointer;
     display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    z-index: 1100;
 }
 
+/* Menú lateral derecho */
 #sidebar {
     position: fixed;
-    left: -250px;
+    right: -250px; /* Oculto */
     top: 0;
     width: 250px;
     height: 100vh;
-    background: #222;
+    background: #333;
     color: white;
-    padding: 20px;
-    transition: left 0.3s;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
 }
 
+/* Mostrar menú cuando está activo */
+#sidebar.active {
+    right: 0;
+}
+
+/* Estilos de enlaces del menú */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -82,17 +98,30 @@ nav ul li a {
 
 #sidebar ul li {
     margin: 20px 0;
+    text-align: center;
 }
 
 #sidebar ul li a {
     color: white;
     text-decoration: none;
+    display: block;
+    padding: 10px;
 }
 
+#sidebar ul li a:hover {
+    background: #575757;
+}
+
+/* Botón para cerrar menú */
 #close-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
     font-size: 24px;
     cursor: pointer;
-    text-align: right;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* Secciones */
@@ -128,36 +157,3 @@ nav ul li a {
         flex-direction: column;
     }
 }
-
-
-
-/* Menú lateral oculto por defecto */
-#sidebar {
-    position: fixed;
-    left: -250px; /* Oculto */
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #333;
-    color: white;
-    transition: left 0.3s ease;
-    padding-top: 60px;
-}
-
-/* Clase que muestra el menú */
-#sidebar.active {
-    left: 0;
-}
-
-/* Botón de menú */
-#menu-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
