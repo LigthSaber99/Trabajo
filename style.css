@@ -321,3 +321,64 @@ body.no-scroll {
             overflow: hidden;
         }
         
+        /* ----- SECCIÓN DE CONTACTO ----- */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #333;  /* Fondo oscuro para contraste */
+    color: white;
+}
+
+.contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: white;
+    color: #333;
+}
+
+/* ----- RESPONSIVE PARA MÓVILES ----- */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-links {
+        flex-direction: column; /* Hace que los enlaces se apilen en móviles */
+        align-items: center;
+    }
+
+    .contact-links a {
+        width: 80%;  /* Asegura que los enlaces sean más fáciles de tocar */
+        text-align: center;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
