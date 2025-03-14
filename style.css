@@ -21,8 +21,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #fff;
     color: #333;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 100%), 
+    url('img/3.jpg') no-repeat center top;
+    background-size: 100% auto; /* Ajusta el ancho al 100% y la altura automática */
+    height: 200vh; /* Para tener suficiente espacio para hacer scroll */
+    background-position: top;
+    background-attachment: scroll; /* Evita que la imagen se quede fija */
 }
 
 /* Header */
@@ -220,27 +225,47 @@ nav ul li a {
 
 
 
-.contact-section {
-    margin-top: 50px;
-}
-.contact-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-.contact-icons a {
-    text-decoration: none;
-}
-.contact-icons img {
-    width: 40px;
-    transition: transform 0.3s ease-in-out;
-}
-.contact-icons img:hover {
-    transform: scale(1.2);
-}
+  .contact-section {
+            margin-top: 50px;
+        }
+        .contact-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .contact-icons a {
+            text-decoration: none;
+        }
+        .contact-icons img {
+            width: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .contact-icons img:hover {
+            transform: scale(1.2);
+        }
+
+
+        .section {
+            position: relative;
+            background: white; /* Ajusta según tu esquema de colores */
+            padding: 50px;
+            margin: 50px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0.8;
+        }
+        
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+        
+        

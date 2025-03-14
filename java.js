@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animaciones de scroll
     gsap.utils.toArray(".section").forEach((seccion) => {
         gsap.fromTo(seccion,
-            { opacity: 0, y: yValue },
+            { opacity: 0, y: yValue },       
             { 
                 opacity: 1, 
                 y: 0, 
@@ -129,5 +129,3 @@ style.innerHTML = `
     transition: width 0.2s ease;
 }
 `;
-document.head.appendChild(style);
-    
