@@ -24,7 +24,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
     });
-
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const sidebar = document.getElementById("sidebar");
+        const closeMenu = document.getElementById("close-menu");
+        const body = document.body;
+    
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+            body.classList.toggle("no-scroll");
+        });
+    
+        closeMenu.addEventListener("click", () => {
+            sidebar.classList.remove("active");
+            body.classList.remove("no-scroll");
+        });
+    
+        document.querySelectorAll("#sidebar a").forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                body.classList.remove("no-scroll");
+            });
+        });
+    });
+    
     // Menú responsive
     const menuToggle = document.getElementById("menu-toggle");
     const sidebar = document.getElementById("sidebar");

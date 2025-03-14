@@ -129,6 +129,17 @@ body.no-scroll {
     padding: 20px;
     border-radius: 10px;
 }
+#menu-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que esté encima de otros elementos */
+    color: white; /* Ajusta según tu diseño */
+}
 /* Responsive */
 @media (max-width: 768px) {
     nav ul {
@@ -145,17 +156,7 @@ body.no-scroll {
 }
 
 
-#menu-toggle {
-    font-size: 28px;
-    cursor: pointer;
-    display: block;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    z-index: 1100;
-}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     body {
@@ -289,3 +290,34 @@ body.no-scroll {
             height: 100%;
             object-fit: cover;
         }
+
+        #sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            transition: right 0.3s ease-in-out;
+            z-index: 1000;
+            padding-top: 60px;
+        }
+        
+        #sidebar.active {
+            right: 0;
+        }
+        
+        #close-menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .no-scroll {
+            overflow: hidden;
+        }
+        
