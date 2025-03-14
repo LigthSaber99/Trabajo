@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Detectar si es móvil
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const yValue = isMobile ? 30 : 100;
     const durationValue = isMobile ? 1 : 1.5;
 
@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.from(".fade-in", { opacity: 0, y: yValue, duration: durationValue, stagger: 0.3 });
 
     // Animaciones de scroll
-    gsap.utils.toArray(".section").forEach((seccion) => {
-        gsap.fromTo(seccion,
+    gsap.utils.toArray(".section").forEach(section => {
+        gsap.fromTo(section,
             { opacity: 0, y: yValue },       
             { 
                 opacity: 1, 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 duration: durationValue, 
                 ease: "power2.out",
                 scrollTrigger: {
-                    trigger: seccion,
+                    trigger: section,
                     start: isMobile ? "top 90%" : "top 80%",
                     toggleActions: "play reverse play reverse"
                 }
@@ -25,39 +25,35 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     });
 
-    // Menú responsive en el lado derecho
+    // Menú responsive
     const menuToggle = document.getElementById("menu-toggle");
     const sidebar = document.getElementById("sidebar");
 
-    function toggleMenu() {
+    menuToggle.addEventListener("click", () => {
         sidebar.classList.toggle("active");
-    }
-
-    menuToggle.addEventListener("click", toggleMenu);
+    });
 
     // Cerrar menú al hacer clic en un enlace y hacer scroll suave
     document.querySelectorAll("#sidebar a").forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
-            const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-            
+            const targetSection = document.querySelector(this.getAttribute("href"));
+
             if (targetSection) {
                 sidebar.classList.remove("active");
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50,
-                    behavior: "smooth"
-                });
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
             }
         });
     });
 
     // Barra de progreso de scroll
-    window.addEventListener("scroll", function () {
-        let scrollTop = window.scrollY;
-        let docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        let progress = (scrollTop / docHeight) * 100;
-        document.getElementById("progress-bar").style.width = progress + "%";
+    const progressBar = document.getElementById("progress-bar");
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / docHeight) * 100;
+        progressBar.style.width = `${progress}%`;
     });
 });
 
@@ -67,7 +63,7 @@ style.innerHTML = `
 /* --- MENÚ RESPONSIVE (LADO DERECHO) --- */
 #sidebar {
     position: fixed;
-    right: -250px; /* Oculto */
+    right: -250px;
     top: 0;
     width: 250px;
     height: 100%;
@@ -129,3 +125,4 @@ style.innerHTML = `
     transition: width 0.2s ease;
 }
 `;
+document.head.appendChild(style);
