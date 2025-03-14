@@ -396,4 +396,5 @@ body.no-scroll {
   .titulo {
     color: inherit; /* Usa el color del texto padre o especifica uno */
     text-decoration: none;
+    font-size: 36px;
   }  
