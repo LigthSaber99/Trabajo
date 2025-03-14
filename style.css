@@ -1,44 +1,44 @@
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    text-align: center;
 }
 header {
-    background: #0073e6;
-    color: white;
-    text-align: center;
     padding: 20px;
+    background: #1f1f1f;
 }
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+.logo {
+    font-size: 2em;
+    font-weight: bold;
 }
-.section {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-h2 {
-    color: #0073e6;
-}
-ul {
+nav ul {
     list-style: none;
     padding: 0;
 }
-ul li {
-    background: #e2e2e2;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
-.contacto a {
-    color: #0073e6;
+nav a {
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
-
+section {
+    padding: 50px 20px;
+}
+.proyecto {
+    background: #282828;
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+a:hover {
+    color: #ffcc00;
+}
