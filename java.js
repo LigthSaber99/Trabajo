@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ddocument.addEventListener("DOMContentLoaded", function () {
     // Detectar si es móvil
     const isMobile = window.innerWidth < 768;
     const yValue = isMobile ? 30 : 100;
@@ -25,26 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     });
 
-    // Menú responsive
-    if (isMobile) {
-        const menuToggle = document.getElementById("menu-toggle");
-        const sidebar = document.getElementById("sidebar");
-        const closeMenu = document.getElementById("close-menu");
+    // Menú responsive (siempre funcional)
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeMenu = document.getElementById("close-menu");
 
-        menuToggle.addEventListener("click", function () {
-            sidebar.style.left = "0";
-        });
-
-        closeMenu.addEventListener("click", function () {
-            sidebar.style.left = "-250px";
-        });
-
-        document.querySelectorAll("#sidebar a").forEach(link => {
-            link.addEventListener("click", function () {
-                sidebar.style.left = "-250px";
-            });
-        });
+    // Asegurar que el menú funcione siempre
+    function abrirMenu() {
+        sidebar.style.left = "0";
     }
+
+    function cerrarMenu() {
+        sidebar.style.left = "-250px";
+    }
+
+    menuToggle.addEventListener("click", abrirMenu);
+    closeMenu.addEventListener("click", cerrarMenu);
+
+    document.querySelectorAll("#sidebar a").forEach(link => {
+        link.addEventListener("click", cerrarMenu);
+    });
 
     // Barra de progreso
     window.addEventListener("scroll", function () {
