@@ -1,4 +1,4 @@
-ddocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Detectar si es móvil
     const isMobile = window.innerWidth < 768;
     const yValue = isMobile ? 30 : 100;
@@ -25,25 +25,35 @@ ddocument.addEventListener("DOMContentLoaded", function () {
         );
     });
 
-    // Menú responsive (siempre funcional)
+    // Menú responsive
     const menuToggle = document.getElementById("menu-toggle");
     const sidebar = document.getElementById("sidebar");
-    const closeMenu = document.getElementById("close-menu");
 
-    // Asegurar que el menú funcione siempre
-    function abrirMenu() {
-        sidebar.style.left = "0";
+    function toggleMenu() {
+        if (sidebar.classList.contains("active")) {
+            sidebar.classList.remove("active");
+        } else {
+            sidebar.classList.add("active");
+        }
     }
 
-    function cerrarMenu() {
-        sidebar.style.left = "-250px";
-    }
+    menuToggle.addEventListener("click", toggleMenu);
 
-    menuToggle.addEventListener("click", abrirMenu);
-    closeMenu.addEventListener("click", cerrarMenu);
-
+    // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll("#sidebar a").forEach(link => {
-        link.addEventListener("click", cerrarMenu);
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el salto inmediato
+            const targetId = this.getAttribute("href"); // Obtiene el ID de la sección
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                sidebar.classList.remove("active"); // Cierra el menú
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Ajusta la posición
+                    behavior: "smooth" // Desplazamiento suave
+                });
+            }
+        });
     });
 
     // Barra de progreso
