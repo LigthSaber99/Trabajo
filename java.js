@@ -178,21 +178,22 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(style);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-
-    document.querySelectorAll(".gallery img").forEach(img => {
-        img.addEventListener("click", function() {
-            modal.classList.add("active");
-            modalImg.src = this.src;
-        });
+// Abrir modal al hacer clic en una imagen
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', function () {
+        document.getElementById('modalImg').src = this.src;
+        document.getElementById('imageModal').style.display = 'flex';
     });
+});
 
-    // Cerrar modal al hacer clic fuera de la imagen
-    modal.addEventListener("click", function(e) {
-        if (e.target !== modalImg) {
-            modal.classList.remove("active");
-        }
-    });
+// Cerrar modal al hacer clic en la "X"
+document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('imageModal').style.display = 'none';
+});
+
+// Cerrar modal al hacer clic fuera de la imagen
+document.getElementById('imageModal').addEventListener('click', function (e) {
+    if (e.target !== document.getElementById('modalImg')) {
+        this.style.display = 'none';
+    }
 });
