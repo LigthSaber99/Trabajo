@@ -178,3 +178,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(style);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".gallery img").forEach(img => {
+        img.addEventListener("click", function() {
+            modal.classList.add("active");
+            modalImg.src = this.src;
+        });
+    });
+
+    // Cerrar modal al hacer clic fuera de la imagen
+    modal.addEventListener("click", function(e) {
+        if (e.target !== modalImg) {
+            modal.classList.remove("active");
+        }
+    });
+});
