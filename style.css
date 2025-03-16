@@ -502,3 +502,45 @@ body.no-scroll {
     color: white;
     cursor: pointer;
 }
+.sobre-mi {
+    max-width: 600px;  /* Reduce el ancho */
+    padding: 20px;  /* Menos espacio interno */
+    margin: auto;  /* Centrado */
+  }
+  .sobre-mi {
+    background: linear-gradient(to right, #ffffff, #f8f8f8);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  #hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Ancho máximo del video */
+    margin: 0 auto;
+}
+
+video {
+    width: 100%; /* Ajusta el video al tamaño del contenedor */
+    height: auto;
+    border-radius: 10px; /* Opcional: Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: Sombra elegante */
+}
+
+/* 📱 Estilos para móviles */
+@media (max-width: 600px) {
+    .video-container {
+        max-width: 100%;
+    }
+
+    video {
+        width: 90%; /* Hace que el video ocupe menos espacio en móviles */
+    }
+}
+  
