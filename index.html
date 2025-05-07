@@ -40,29 +40,29 @@
         <h2>Diseñador de Contenido Multimedia, Informatico Empresarial & Desarrollador Web</h2>
         <p>Explora mi trabajo en diseño digital, desarrollo web y rebranding de plataformas.</p>
     </section>
+    <section id="sobre-mi" class="section fade-in sobre-mi">
+        <h2 class="sobre-mi-titulo">Sobre Mí</h2>
+        <p class="sobre-mi-texto">
+            Soy estudiante de Bachillerato en Informática Empresarial en la Universidad de Costa Rica (UCR),
+            una carrera que me ha permitido desarrollar una visión integral del uso estratégico de la tecnología en 
+            los negocios. Además, me gradué como Diseñador Web Front-End de UCENFOTEC, donde adquirí una sólida base 
+            en el desarrollo de interfaces web modernas, enfocadas en la experiencia del usuario y las mejores prácticas 
+            de diseño responsivo.
 
-    <section id="sobre-mi" class="section fade-in">
-        <h2>Sobre Mí</h2>
-        <p>Soy estudiante de Bachillerato en Informática Empresarial en la Universidad de Costa Rica (UCR),
-             una carrera que me ha permitido desarrollar una visión integral del uso estratégico de la tecnología en 
-             los negocios. Además, me gradué como Diseñador Web Front-End de UCENFOTEC, donde adquirí una sólida base 
-             en el desarrollo de interfaces web modernas, enfocadas en la experiencia del usuario y las mejores prácticas 
-             de diseño responsivo.
-
-            Mi enfoque combina habilidades técnicas con una mentalidad analítica y creativa. 
-            Me apasiona construir soluciones digitales funcionales, limpias y atractivas, utilizando tecnologías 
-            como HTML, CSS, JavaScript, así como frameworks como Bootstrap y Tailwind. También tengo experiencia trabajando 
-            con WordPress y herramientas de diseño como Photshop para la creación de prototipos interactivos.
-            
-            Soy una persona comprometida, orientada al detalle y con una gran disposición para aprender y adaptarme a 
-            nuevos entornos y retos. Actualmente, busco oportunidades para aplicar mis conocimientos en proyectos reales, 
-            crecer profesionalmente y contribuir positivamente a los equipos de trabajo en los que participe.
-            
-            
+           Mi enfoque combina habilidades técnicas con una mentalidad analítica y creativa. 
+           Me apasiona construir soluciones digitales funcionales, limpias y atractivas, utilizando tecnologías 
+           como HTML, CSS, JavaScript, así como frameworks como Bootstrap. También tengo experiencia trabajando 
+           con WordPress y herramientas de diseño como Photshop para la creación de prototipos interactivos.
+           
+           Soy una persona comprometida, orientada al detalle y con una gran disposición para aprender y adaptarme a 
+           nuevos entornos y retos. Actualmente, busco oportunidades para aplicar mis conocimientos en proyectos reales, 
+           crecer profesionalmente y contribuir positivamente a los equipos de trabajo en los que participe.
+           
         </p>
-        <i class="fas fa-user-circle"></i>
-
+        <a href="CV_Andrey_Anchia_Umana.pdf" class="btn-descargar-cv" download>📄 Descargar Currículum</a>
     </section>
+    
+  
 
     <section id="trabajos" class="section fade-in">
         <h2>Mis Trabajos</h2>
@@ -91,6 +91,36 @@
                                 📄 Descargar Currículum
                             </a>
                         </div>
+                        <h3 class="mb-4">¿Tienes un proyecto o duda? Escríbeme</h3>
+                        
+                        
+
+
+                        <form id="contact-form" action="https://formspree.io/f/mvgarkvd" method="POST">
+                            <div class="mb-3">
+                                <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Tu correo electrónico" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="mensaje" rows="5" class="form-control" placeholder="Tu mensaje" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light">Enviar mensaje</button>
+                        </form>
+                        
+                        <!-- Mensaje de éxito -->
+                        <div id="mensaje-exito" style="display:none; margin-top:20px; color:#0f0; font-weight:bold;">
+                            ✅ ¡Gracias! Tu mensaje fue enviado correctamente.
+                        </div>
+                        
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
